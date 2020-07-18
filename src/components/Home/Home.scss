@@ -1,0 +1,65 @@
+//GLOBAL
+@import '../../App.scss';
+
+//HOME PAGE
+.homepage {
+    margin-top: 5em;
+}
+
+.pages {
+    .title-link {
+        text-decoration: none;
+        color: black;
+    }
+}
+
+//ABOUT SECTION
+.section-one {
+    img {
+        width: 100%;
+        height: auto;
+        border-radius: 50%;
+    }
+
+    p {
+        margin-right: 1em;
+    }
+}
+
+//SKILLS SECTION
+.section-two {
+    @include transparent-bg(0, 0, 0, 0.88);
+    border: 1px solid $sea-blue;
+    color: white;
+    width: 100%;
+    margin: 2em 0;
+    padding: 2em;
+    border-radius: 5px;
+}
+
+//PROJECT SECTION
+.section-three {
+    margin: 2em auto;
+    padding: 0 2em;
+
+    .cardmedia {
+        width: 100%;
+        height: auto;
+    }
+
+    .cards {
+        @include transparent-bg(0, 0, 0, 0.7);
+        color: white;
+
+        h3 {
+            padding: 0;
+        }
+    }
+
+    .view-btn {
+        color: white !important;
+        text-align: center;
+        margin: 0 auto;
+        background-color: $sea-blue;
+    }
+}

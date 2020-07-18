@@ -1,0 +1,48 @@
+$fx: all ease-in-out 2s;
+
+@mixin shallow-shadow {
+    -webkit-box-shadow: 3px 5px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 3px 5px 5px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 3px 5px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+@mixin deep-shadow {
+    -webkit-box-shadow: 7px 9px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 7px 9px 5px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 7px 9px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+@mixin rounded-btn {
+    width: 8rem;
+    margin-bottom: 2%;
+    background-color: #373543 !important;
+    border-color: #373543 !important;
+    border-radius: 20px !important;
+    font-weight: bold;
+    @include shallow-shadow;
+}
+
+@mixin rounded-btn-hover {
+    background-color: #2199BE !important;
+    border-color: rgb(28, 132, 163) !important;
+    transition: $fx;
+    @include deep-shadow;
+}
+
+.Welcome {
+    padding-top: 10%;
+}
+
+.welcome-msg {
+    margin-left: 10%;
+    margin-right: 10%;
+    font-size: 17px;
+}
+
+.btn-primary {
+    @include rounded-btn;
+}
+
+.btn-primary:hover {
+    @include rounded-btn-hover;
+}

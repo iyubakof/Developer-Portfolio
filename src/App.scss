@@ -1,0 +1,21 @@
+//GLOBALS
+@mixin transparent-bg($r, $g, $b, $opacity) {
+  background-color: rgba($r, $g, $b, $opacity) !important;
+}
+
+$sea-blue: #2199BE;
+
+//NAVIGATION
+.navbar {
+  @include transparent-bg(0, 0, 0, 0.7);
+  
+  .nav {
+    text-align: center;
+  }
+
+  .navlink {
+    text-decoration: none;
+    color: white;
+    margin: 2em;
+  }
+}
