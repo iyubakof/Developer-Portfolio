@@ -1,8 +1,8 @@
 //GLOBAL
-@import '../../App.scss';
+@import "../../App.scss";
 
 //HOME PAGE
-.homepage {
+.page-title {
     margin-top: 5em;
 }
 
@@ -13,28 +13,253 @@
     }
 }
 
-//ABOUT SECTION
-.section-one {
+//INTRO
+.intro-section {
+    // background-color: #B3ACBC;
+    // background-color: #A89C8C;
     img {
-        width: 100%;
-        height: auto;
-        border-radius: 50%;
+        width: 80%;
     }
+}
 
-    p {
+//ABOUT SECTION
+//mobile
+@media only screen and (max-width: 600px) {
+    .section-one {
+        margin-left: 1em;
         margin-right: 1em;
     }
 }
 
+.section-initial,
+.about-txt {
+    p {
+        margin: 2em;
+    }
+}
+.section-one {
+    background-color: $lavender;
+    img {
+        width: 100%;
+        height: auto;
+        // border-radius: 50%;
+    }
+
+    .portrait,
+    .personal-about,
+    .about-txt {
+        width: 100%;
+        height: 100%;
+        padding: 0 !important;
+    }
+
+    .personal-about {
+        background-color: transparent;
+    }
+
+    .about-txt {
+        @include center-center;
+    }
+}
+
+.section-div {
+    @include center-center;
+}
+
 //SKILLS SECTION
+.grid-item > img {
+    width: 10%;
+    height: 10%;
+}
+
+.skill-container {
+    @include center-center;
+}
+
+.skill-page {
+    width: 90%;
+    // margin: auto;
+}
+
 .section-two {
-    @include transparent-bg(0, 0, 0, 0.88);
-    border: 1px solid $sea-blue;
+    // @include transparent-bg(0, 0, 0, 0.6);
+    @include transparent-bg(59, 51, 72, 0.8);
+    border: 3px solid $deep-purple;
     color: white;
-    width: 100%;
-    margin: 2em 0;
-    padding: 2em;
+    // width: 100%;
+    // margin: 2em 0;
+    // padding: 2em;
     border-radius: 5px;
+    height: 100%;
+    @include center-center;
+
+    .skill-container {
+        padding: 2em 0;
+    }
+}
+
+//SERVICES SECTION
+.service-page {
+    ul {
+        list-style: none;
+        margin-block-start: 0;
+        margin-block-end: 0;
+        padding-inline-start: 0;
+    }
+
+    .consult-container,
+    .addon-container {
+        position: relative;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+        .consult {
+            position: absolute;
+            top: 10%;
+            border-radius: 2px;
+            // border: 1px solid $grass;
+            margin: auto 10%;
+        }
+
+        .addon-txt {
+            position: absolute;
+            top: 10vw;
+
+            h2 {
+                font-size: 2.2em;
+                margin-bottom: 0;
+            }
+            small {
+                font-size: 0.75em;
+            }
+            ul {
+                margin-top: 1em;
+                li {
+                    margin-bottom: 0.5em;
+                    font-size: 1.2em;
+                }
+            }
+        }
+        
+        @media screen and (max-width: 800px) {
+            .consult{
+                @include transparent-bg(152, 184, 163, 0.6);
+            }
+
+            .addon-txt {
+                h2 {
+                    font-size: 1.5em;
+                    margin-bottom: 0;
+                }
+                small {
+                    font-size: 0.75em;
+                    color: $deep-purple;
+                }
+                ul {
+                    margin-top: 1em;
+                    li {
+                        margin-bottom: 0.5em;
+                        font-size: 0.8em;
+                    }
+                }
+            }
+            
+        }
+
+    }
+
+    .grid-txt {
+        border-radius: 1px;
+        padding: 0.5em;
+        @include shallow-shadow();
+    }
+
+    .grid-txt:hover {
+        @include no-shadow();
+        // @include deep-shadow();
+        background-color: $deep-sea !important;
+        color: white;
+        transition: all ease-in-out 0.5s;
+    }
+
+    .srv-container {
+        width: 100%;
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+    
+    #automation-serv {
+        background-color: $lavender;
+        padding-bottom: 3em;
+    }
+
+    .package {
+        .grid-txt {
+            @include transparent-bg(116, 70, 106, 0.7);
+            border: 1px solid $violet;
+            transition: all ease-in-out 0.5s;
+        }
+        height: 100%;
+    }
+
+    .service-packages {
+        margin-bottom: 3em;
+        padding-left: 0.5em;
+        padding-right: 0.5em;
+    }
+
+    .improv-title,
+    .pckg-title {
+        margin-top: 4em;
+    }
+    .tech-improvements {
+        .grid-txt {
+            @include transparent-bg(152, 184, 163, 0.8);
+            border: 1px solid $deep-sea;
+            transition: all ease-in-out 0.5s;
+            padding: 0.8em;
+        }
+    }
+}
+
+//BOOKING SECTION
+.booking-page {
+    margin-top: 5em;
+
+    .section-five {
+        .booking-row {
+            .booking {
+                width: 100%;
+                height: 100%;
+            }
+            .booking-btn {
+                width: 35%;
+                height: 5em;
+                border-radius: 5px;
+                border: 1px solid $deep-sea;
+                background-color: $deep-sea;
+                color: $succulent;
+                font-weight: bold;
+                font-size: 1em;
+                transition: all ease-in-out 1s;
+            }
+            .booking-btn:hover {
+                width: 40%;
+                color: $deep-sea !important;
+                background-color: $succulent !important;
+                @include shallow-shadow;
+                transition: all ease-in-out 1s;
+            }
+            .booking-img img {
+                width: 100%;
+                height: auto;
+                border-radius: 5px;
+            }
+        }
+    }
 }
 
 //PROJECT SECTION
@@ -43,12 +268,13 @@
     padding: 0 2em;
 
     .cardmedia {
-        width: 100%;
-        height: auto;
+        // width: 100%;
+        // max-height: 400px;
     }
 
     .cards {
-        @include transparent-bg(0, 0, 0, 0.7);
+        @include transparent-bg(143, 114, 132, 1);
+        @include shallow-shadow();
         color: white;
 
         h3 {
@@ -60,6 +286,12 @@
         color: white !important;
         text-align: center;
         margin: 0 auto;
-        background-color: $sea-blue;
+        background-color: $lavender !important;
+    }
+    .view-btn:hover {
+        color: white !important;
+        text-align: center;
+        margin: 0 auto;
+        background-color: $grass !important;
     }
 }

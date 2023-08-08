@@ -1,19 +1,23 @@
 import React, { Component } from 'react';
 import About from './About/About';
 import Skills from './Skills/Skills';
-import Projects from './Projects/Projects';
-import Navigation from '../../constants/Navigation';
+import Services from './Services/ServicesSnippet/Services';
+import Booking from './Services/Booking/Booking';
+import Intro from '../../constants/Intro';
 import './Home.scss';
 
 export class Home extends Component {
     render() {
         return (
             <>
-                <Navigation />
                 <div className="homepage">
+                    <Intro />
+                    <br/>
+                    <br/>
                     <About />
                     <Skills />
-                    <Projects />
+                    <Services />
+                    <Booking />
                 </div>
             </>
         )

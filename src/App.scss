@@ -1,21 +1,101 @@
 //GLOBALS
+.projectHeader {
+  font-family: 'Comfortaa', cursive !important;
+}
+
 @mixin transparent-bg($r, $g, $b, $opacity) {
   background-color: rgba($r, $g, $b, $opacity) !important;
 }
 
-$sea-blue: #2199BE;
+@mixin hor-ctr {
+  text-align: center !important;
+}
+
+@mixin vertical-ctr {
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+@mixin center-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+@mixin shallow-shadow {
+  -webkit-box-shadow: 2px 3px 3px 0px rgba(0, 0, 0, 0.9);
+  -moz-box-shadow: 2px 3px 3px 0px rgba(0, 0, 0, 0.9);
+  box-shadow: 2px 3px 3px 0px rgba(0, 0, 0, 0.9);
+}
+
+@mixin deep-shadow {
+  -webkit-box-shadow: 7px 9px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 7px 9px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 7px 9px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+@mixin no-shadow {
+  -webkit-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+  -moz-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+}
+
+$lavender: #b3acbc;
+$deep-purple: #74466a;
+$violet: #3b3348;
+$deep-sea: #5b7478;
+$grass: #98b8a3;
+$succulent: #d0dac1;
 
 //NAVIGATION
 .navbar {
-  @include transparent-bg(0, 0, 0, 0.7);
-  
+  background-color: #98B8A3 !important;
+
   .nav {
     text-align: center;
   }
 
   .navlink {
     text-decoration: none;
-    color: white;
+    color: #5B7478;
+    font-weight: bold;
     margin: 2em;
+    font-family: 'Comfortaa', sans-serif;
+  }
+
+  .navlink:hover {
+    color: #3B3348;
+    transition: all 0.5s cubic-bezier(1, 0, 0, 1);
+  }
+}
+
+
+//GLOBAL STYLES
+.section-div {
+  height: 100%;
+}
+
+.link {
+  text-decoration: none;
+  color: $succulent !important;
+}
+
+//POLICY PAGE
+.title-container {
+  position: relative;
+  @include center-center();
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  h1 {
+    position: absolute;
+    top: 10% !important;
+    font-size: 4.5em;
   }
 }

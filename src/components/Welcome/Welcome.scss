@@ -1,36 +1,43 @@
+@import '../../App.scss';
+
 $fx: all ease-in-out 2s;
-
-@mixin shallow-shadow {
-    -webkit-box-shadow: 3px 5px 5px 0px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 3px 5px 5px 0px rgba(0, 0, 0, 0.75);
-    box-shadow: 3px 5px 5px 0px rgba(0, 0, 0, 0.75);
-}
-
-@mixin deep-shadow {
-    -webkit-box-shadow: 7px 9px 5px 0px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 7px 9px 5px 0px rgba(0, 0, 0, 0.75);
-    box-shadow: 7px 9px 5px 0px rgba(0, 0, 0, 0.75);
-}
 
 @mixin rounded-btn {
     width: 8rem;
     margin-bottom: 2%;
-    background-color: #373543 !important;
-    border-color: #373543 !important;
+    background-color: $violet !important;
+    border-color: $violet !important;
     border-radius: 20px !important;
     font-weight: bold;
     @include shallow-shadow;
+    transition: $fx;
 }
 
 @mixin rounded-btn-hover {
-    background-color: #2199BE !important;
-    border-color: rgb(28, 132, 163) !important;
-    transition: $fx;
+    width: 10rem;
+    background-color: $deep-sea !important;
+    border-color: $deep-sea !important;
     @include deep-shadow;
+    transition: $fx;
+}
+
+@media only screen and (max-width: 600px) {
+    .title-section {
+        margin-left: 1em;
+        margin-right: 1em;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+    .Welcome {
+        margin-top: 10em;
+    }
 }
 
 .Welcome {
     padding-top: 10%;
+    text-align: center;
+    @include center-center;
 }
 
 .welcome-msg {

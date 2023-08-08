@@ -12,7 +12,7 @@ export class Projects extends Component {
                     <Link name="projects" className="title-link">
                         <h1>Projects</h1>
                     </Link>
-                    <section className="section-three">
+                    <section className="section-three section-div">
                         <Grid container
                             spacing={3}
                             direction="row"

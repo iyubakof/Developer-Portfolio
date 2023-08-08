@@ -7,24 +7,29 @@ export class Welcome extends Component {
     render() {
         return (
             <div className="App Welcome">
-                <h1 className="fancy"><span>Welcome to My World</span></h1>
-                <h2>Hello there! I am Yvonne Ubak.</h2>
-                <h3>I am a Junior Web Developer, Software Developer, and Front-End and UI Designer.</h3>
-                <div className="welcome-msg">
+                <div className='title-section'>
+                    {/* LOGO GOES HERE */}
+                    <h1 className="fancy"><span>Welcome to Our World</span></h1>
+                    <h1 style={{fontSize: '1.5em'}}>Dash of Dara</h1>
+                    <h2>Let us guide you through your journey to help your business work FOR you and grow.</h2>
+                </div>
+                <section className="spacer"></section>
+                <Button variant="contained" className="btn-primary">
+                    <Link to="/home" className="link explore-link">Explore</Link>
+                </Button>
+            </div>
+        )
+    }
+}
+
+{/* <div className="welcome-msg">
                     <p>
                         With a Bachelor of Science in Computer Information Systems, intensive trainings in Full Stack
                         Development, and some professional developement experience,
                         my passion and talents for coding and user-friendly aesthetics grows deeper and deeper. As an avid learner,
                         I am always seeking new knowledge and ways to improve each day.
                 </p>
-                    <p>Click below to view my work!</p>
-                </div>
-                <Button variant="contained" className="btn-primary">
-                    <Link to="/home" className="link">Explore</Link>
-                </Button>
-            </div>
-        )
-    }
-}
+                    <p style={{ fontWeight: 'bold' }}>Click below to view my work!</p>
+                </div> */}
 
 export default Welcome
