@@ -6,6 +6,9 @@ import expenseTracker from '../assets/images/Expense_ss.png';
 import sunsetToDo from '../assets/images/Sunset_ToDo.PNG';
 import worldwideTai from '../assets/images/worldwideTai.png';
 import git from '../assets/images/Octocat.png';
+import trGraceLogo from '../assets/images/trGrace logo.png';
+import novaaNet from '../assets/images/novaa.png';
+import qingOracle from '../assets/images/qingOracle.png';
 
 export const calenderUI = calender;
 export const profileUI = profileMockup;
@@ -15,3 +18,6 @@ export const expense = expenseTracker;
 export const sunset = sunsetToDo;
 export const tai = worldwideTai;
 export const github = git;
+export const trGrace = trGraceLogo;
+export const novaa = novaaNet;
+export const qing = qingOracle;
